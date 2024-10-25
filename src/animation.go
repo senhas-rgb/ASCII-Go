@@ -48,7 +48,6 @@ func frame(character string) {
 
 }
 
-func main() {
-	character := "o"
-	frame(character)
+func ball() {
+	main()
 }
