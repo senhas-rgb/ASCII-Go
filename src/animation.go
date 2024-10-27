@@ -50,6 +50,4 @@ func frame(character string) {
 
 func main() {
 	frame(">")
-	ScreenClear(2000)
-	coffees()
 }
