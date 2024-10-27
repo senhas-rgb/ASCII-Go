@@ -15,16 +15,16 @@ func ScreenClear(period int) {
 }
 
 func frame(character string) {
-	bottom := [32]string{}
-	middle := [32]string{}
-	top := [32]string{}
+	bottom := [132]string{}
+	middle := [132]string{}
+	top := [132]string{}
 	i := 0
 	for {
 		top[i] = "-"
 		bottom[i] = "-"
 		middle[i] = " "
 		i++
-		if i == 32 {
+		if i == 132 {
 			break
 		}
 	}
@@ -36,18 +36,20 @@ func frame(character string) {
 		fmt.Println(top)
 		fmt.Println(middle)
 		fmt.Println(bottom)
-		ScreenClear(200)
+		ScreenClear(500)
 		i++
-		if i == 32 {
+		if i == 132 {
 			break
 		}
 		middle[position] = character
-		middle[position-1] = " "
+		middle[position-1] = "*"
 		position++
 	}
 
 }
 
-func ball() {
-	main()
+func main() {
+	frame(">")
+	ScreenClear(2000)
+	coffees()
 }
